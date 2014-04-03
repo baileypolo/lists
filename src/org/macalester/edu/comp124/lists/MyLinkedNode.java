@@ -23,4 +23,5 @@ public class MyLinkedNode<E> {
 	public E getValue() {
 		return value;
 	}
+
 }

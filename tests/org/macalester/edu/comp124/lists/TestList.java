@@ -7,7 +7,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class TestList {
-    private MyArrayList<String> list = new MyArrayList<String>();
+    private MyLinkedList<String> list = new MyLinkedList<String>();
 
     @Test
 	public void testGet() {
@@ -19,7 +19,7 @@ public class TestList {
 		assertEquals(list.get(1), "bar");
 		assertEquals(list.get(2), "baz");
 	}
-	
+
 	/**
 	 * Tests that appending at the end of a list works.
 	 */
@@ -83,7 +83,7 @@ public class TestList {
         list.add("foo");
         assertEquals(llist.size(), 1);
 
-        // there should be a new node following the head.
+//        there should be a new node following the head.
         MyLinkedNode<String> fooNode = llist.getHead().getNext();
         assertNotSame(fooNode, llist.getTail());
         assertEquals(fooNode.getValue(), "foo");
